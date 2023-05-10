@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Hello(props){
+    return <h1>Hello, {props.name}</h1>
 }
 
-export default App;
+// <Hello></Hello> : 쓸 내용 있을때
+// <Hello /> : 쓸 내용이 없으면
+const element = <Hello name="An!!" />;
+ReactDOM.render(element, document.getElementById("root"));
+
+export default Hello;
